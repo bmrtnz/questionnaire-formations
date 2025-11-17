@@ -400,6 +400,11 @@
             <div class="progress-bar">
                 <div class="progress-fill" id="progressBar"></div>
             </div>
+            <div style="margin-top: 20px;">
+                <a href="URL_DE_TA_PAGE_AUTO_DIAGNOSTIC" target="_parent" class="btn btn-secondary" style="text-decoration: none; display: inline-block;">
+                    ← Retour à Auto diagnostic
+                </a>
+            </div>
         </div>
 
         <div class="tabs">
@@ -478,6 +483,9 @@
             <div class="action-buttons">
                 <button class="btn btn-secondary" onclick="showTab('questionnaire')">← Modifier mes réponses</button>
                 <button class="btn btn-primary" onclick="exportResults()">📥 Exporter les résultats</button>
+                <a href="URL_DE_TA_PAGE_AUTO_DIAGNOSTIC" target="_parent" class="btn btn-secondary" style="text-decoration: none; display: inline-block;">
+                    ← Retour à Auto diagnostic
+                </a>
             </div>
         </div>
     </div>
@@ -774,8 +782,13 @@
             document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
             document.getElementById(tabName).classList.add('active');
 
-            // Scroll to top
+            // Scroll to top - multiple méthodes pour assurer la compatibilité
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            document.body.scrollTop = 0; // Pour Safari
+            document.documentElement.scrollTop = 0; // Pour Chrome, Firefox, IE et Opera
+            
+            // Alternative : scroll vers le header
+            document.querySelector('.header').scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         // Exporter les résultats
