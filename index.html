@@ -557,48 +557,253 @@
             transform: translateY(-2px);
         }
 
+        
+        /* Amélioration pour le tactile */
+        .option, .btn, .tab {
+            -webkit-tap-highlight-color: rgba(99, 102, 241, 0.2);
+            touch-action: manipulation;
+        }
+
+        .option:active {
+            transform: scale(0.98);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Éviter le zoom sur les inputs en mobile */
+        input[type="radio"] {
+            font-size: 16px;
+        }
+
+        /* Scrolling fluide */
+        html {
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
         @media (max-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
             .header {
                 padding: 30px 20px;
             }
             
             .header h1 {
-                font-size: 1.8em;
+                font-size: 1.6em;
+                line-height: 1.2;
+            }
+
+            .header p {
+                font-size: 1em;
+            }
+
+            .progress-container {
+                padding: 15px 20px;
+            }
+
+            .progress-text {
+                font-size: 0.85em;
             }
             
             .tabs {
-                flex-direction: column;
+                display: flex;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .tab {
+                flex: 0 0 auto;
+                min-width: 33.33%;
+                padding: 15px 10px;
+                font-size: 0.85em;
+                white-space: nowrap;
             }
             
             .tab-content {
-                padding: 30px 20px;
+                padding: 25px 20px;
             }
-            
-            .category-title {
-            background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
-            color: white;
-            padding: 20px 30px;
-            margin: 50px 0 30px;
-            font-size: 1.3em;
-            font-weight: 700;
-            letter-spacing: -0.3px;
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
-        }
 
-            .question-card {
+            .intro-section {
+                padding: 25px 20px;
+                margin-bottom: 25px;
+            }
+
+            .intro-section h2 {
+                font-size: 1.4em;
+            }
+
+            .intro-section ul li {
+                font-size: 0.95em;
+                padding: 10px 0 10px 25px;
+            }
+
+            .bareme-section h2 {
+                font-size: 1.4em;
+            }
+
+            .bareme-card {
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+
+            .bareme-card h3 {
+                font-size: 1em;
+            }
+
+            .bareme-card p {
+                font-size: 0.9em;
+            }
+
+            .advice-box {
                 padding: 20px;
             }
 
-            .action-buttons {
-                flex-direction: column;
+            .advice-box h3 {
+                font-size: 1.1em;
             }
 
-            .btn {
-                width: 100%;
+            .advice-box ul li {
+                font-size: 0.9em;
+            }
+            
+            .category-title {
+                margin: 30px -20px 20px;
+                padding: 15px 20px;
+                font-size: 1.1em;
+            }
+
+            .question-card {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+
+            .question-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .question-number {
+                min-width: 40px;
+                height: 40px;
+                margin-right: 0;
+                margin-bottom: 15px;
+                font-size: 1em;
+            }
+
+            .question-text {
+                font-size: 0.95em;
+                line-height: 1.6;
+            }
+
+            .options {
+                gap: 10px;
+            }
+
+            .option {
+                padding: 15px;
+            }
+
+            .option label {
+                font-size: 0.9em;
+                line-height: 1.5;
+            }
+
+            .global-score {
+                padding: 35px 20px;
+                margin-bottom: 30px;
+            }
+
+            .global-score h2 {
+                font-size: 1.2em;
+            }
+
+            .global-score .score {
+                font-size: 3.5em;
+            }
+
+            .global-score .percentage {
+                font-size: 1.2em;
+            }
+
+            .theme-section {
+                margin-bottom: 40px;
+            }
+
+            .theme-title {
+                padding: 15px 20px;
+                font-size: 1.1em;
+                margin-bottom: 20px;
             }
 
             .results-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .result-card {
+                padding: 25px 20px;
+            }
+
+            .result-card h3 {
+                font-size: 1.1em;
+                margin-bottom: 15px;
+            }
+
+            .score-display {
+                font-size: 2.5em;
+            }
+
+            .score-detail {
+                font-size: 0.9em;
+            }
+
+            .formation-description {
+                padding: 15px;
+                font-size: 0.85em;
+                margin-top: 15px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                gap: 12px;
+                padding: 20px 0;
+                margin-top: 25px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 14px 30px;
+                font-size: 0.95em;
+            }
+        }
+
+        /* Media query pour très petits écrans */
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 1.4em;
+            }
+
+            .tab {
+                min-width: 33.33%;
+                padding: 12px 8px;
+                font-size: 0.8em;
+            }
+
+            .global-score .score {
+                font-size: 3em;
+            }
+
+            .score-display {
+                font-size: 2em;
+            }
+
+            .question-number {
+                min-width: 35px;
+                height: 35px;
+                font-size: 0.9em;
             }
         }
     </style>
