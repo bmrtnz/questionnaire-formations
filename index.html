@@ -557,253 +557,48 @@
             transform: translateY(-2px);
         }
 
-        
-        /* Amélioration pour le tactile */
-        .option, .btn, .tab {
-            -webkit-tap-highlight-color: rgba(99, 102, 241, 0.2);
-            touch-action: manipulation;
-        }
-
-        .option:active {
-            transform: scale(0.98);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        /* Éviter le zoom sur les inputs en mobile */
-        input[type="radio"] {
-            font-size: 16px;
-        }
-
-        /* Scrolling fluide */
-        html {
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-        }
         @media (max-width: 768px) {
-            body {
-                font-size: 14px;
-            }
-
             .header {
                 padding: 30px 20px;
             }
             
             .header h1 {
-                font-size: 1.6em;
-                line-height: 1.2;
-            }
-
-            .header p {
-                font-size: 1em;
-            }
-
-            .progress-container {
-                padding: 15px 20px;
-            }
-
-            .progress-text {
-                font-size: 0.85em;
+                font-size: 1.8em;
             }
             
             .tabs {
-                display: flex;
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-
-            .tab {
-                flex: 0 0 auto;
-                min-width: 33.33%;
-                padding: 15px 10px;
-                font-size: 0.85em;
-                white-space: nowrap;
+                flex-direction: column;
             }
             
             .tab-content {
-                padding: 25px 20px;
-            }
-
-            .intro-section {
-                padding: 25px 20px;
-                margin-bottom: 25px;
-            }
-
-            .intro-section h2 {
-                font-size: 1.4em;
-            }
-
-            .intro-section ul li {
-                font-size: 0.95em;
-                padding: 10px 0 10px 25px;
-            }
-
-            .bareme-section h2 {
-                font-size: 1.4em;
-            }
-
-            .bareme-card {
-                padding: 20px;
-                margin-bottom: 15px;
-            }
-
-            .bareme-card h3 {
-                font-size: 1em;
-            }
-
-            .bareme-card p {
-                font-size: 0.9em;
-            }
-
-            .advice-box {
-                padding: 20px;
-            }
-
-            .advice-box h3 {
-                font-size: 1.1em;
-            }
-
-            .advice-box ul li {
-                font-size: 0.9em;
+                padding: 30px 20px;
             }
             
             .category-title {
-                margin: 30px -20px 20px;
-                padding: 15px 20px;
-                font-size: 1.1em;
-            }
+            background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+            color: white;
+            padding: 20px 30px;
+            margin: 50px 0 30px;
+            font-size: 1.3em;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+        }
 
             .question-card {
-                padding: 20px 15px;
-                margin-bottom: 20px;
-            }
-
-            .question-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .question-number {
-                min-width: 40px;
-                height: 40px;
-                margin-right: 0;
-                margin-bottom: 15px;
-                font-size: 1em;
-            }
-
-            .question-text {
-                font-size: 0.95em;
-                line-height: 1.6;
-            }
-
-            .options {
-                gap: 10px;
-            }
-
-            .option {
-                padding: 15px;
-            }
-
-            .option label {
-                font-size: 0.9em;
-                line-height: 1.5;
-            }
-
-            .global-score {
-                padding: 35px 20px;
-                margin-bottom: 30px;
-            }
-
-            .global-score h2 {
-                font-size: 1.2em;
-            }
-
-            .global-score .score {
-                font-size: 3.5em;
-            }
-
-            .global-score .percentage {
-                font-size: 1.2em;
-            }
-
-            .theme-section {
-                margin-bottom: 40px;
-            }
-
-            .theme-title {
-                padding: 15px 20px;
-                font-size: 1.1em;
-                margin-bottom: 20px;
-            }
-
-            .results-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .result-card {
-                padding: 25px 20px;
-            }
-
-            .result-card h3 {
-                font-size: 1.1em;
-                margin-bottom: 15px;
-            }
-
-            .score-display {
-                font-size: 2.5em;
-            }
-
-            .score-detail {
-                font-size: 0.9em;
-            }
-
-            .formation-description {
-                padding: 15px;
-                font-size: 0.85em;
-                margin-top: 15px;
+                padding: 20px;
             }
 
             .action-buttons {
                 flex-direction: column;
-                gap: 12px;
-                padding: 20px 0;
-                margin-top: 25px;
             }
 
             .btn {
                 width: 100%;
-                padding: 14px 30px;
-                font-size: 0.95em;
-            }
-        }
-
-        /* Media query pour très petits écrans */
-        @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.4em;
             }
 
-            .tab {
-                min-width: 33.33%;
-                padding: 12px 8px;
-                font-size: 0.8em;
-            }
-
-            .global-score .score {
-                font-size: 3em;
-            }
-
-            .score-display {
-                font-size: 2em;
-            }
-
-            .question-number {
-                min-width: 35px;
-                height: 35px;
-                font-size: 0.9em;
+            .results-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -1208,14 +1003,19 @@
         }
 
         // Exporter les résultats
-        function exportResults() {
+                function exportResults() {
             const totalScore = Object.values(responses).reduce((a, b) => a + b, 0);
             const maxTotalScore = questions.length * 5;
             const globalPercentage = ((totalScore / maxTotalScore) * 100).toFixed(1);
 
-            let text = `AUTO-DIAGNOSTIC MANAGÉRIAL - MEILLEUR MANAGER\n`;
-            text += `${'='.repeat(50)}\n\n`;
-            text += `Score Global: ${totalScore}/${maxTotalScore} (${globalPercentage}%)\n\n`;
+            let text = `AUTO-DIAGNOSTIC MANAGÉRIAL - MEILLEUR MANAGER
+`;
+            text += `${'='.repeat(50)}
+
+`;
+            text += `Score Global: ${totalScore}/${maxTotalScore} (${globalPercentage}%)
+
+`;
 
             // Calculer les scores par formation
             const formationScores = {};
@@ -1261,33 +1061,106 @@
             });
 
             Object.keys(byTheme).forEach(theme => {
-                text += `\n${theme}\n${'-'.repeat(theme.length)}\n`;
+                text += `
+${theme}
+${'-'.repeat(theme.length)}
+`;
                 byTheme[theme].forEach(r => {
-                    text += `\n${r.formation}\n`;
-                    text += `  Score: ${r.score}/${r.maxScore} (${r.percentage}%)\n`;
-                    text += `  Priorité: ${r.priority}\n`;
+                    text += `
+${r.formation}
+`;
+                    text += `  Score: ${r.score}/${r.maxScore} (${r.percentage}%)
+`;
+                    text += `  Priorité: ${r.priority}
+`;
                 });
             });
 
-            text += `\n\nDétail des réponses\n${'-'.repeat(20)}\n`;
+            text += `
+
+Détail des réponses
+${'-'.repeat(20)}
+`;
             questions.forEach(q => {
                 const score = responses[q.num] || 0;
                 const label = bareme.find(b => b.points === score)?.label || 'Non répondu';
-                text += `\n${q.num}: ${label} (${score} points)\n`;
+                text += `
+${q.num}: ${label} (${score} points)
+`;
             });
 
-            // Créer et télécharger le fichier
-            const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'diagnostic_managerial_meilleurmanager.txt';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
+            // Détection iOS/Safari
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+            if (isIOS || isSafari) {
+                // Méthode 1 pour iOS : Ouvrir dans un nouvel onglet
+                const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                
+                // Ouvrir dans un nouvel onglet pour iOS
+                const newWindow = window.open(url, '_blank');
+                
+                if (newWindow) {
+                    // Afficher un message à l'utilisateur
+                    setTimeout(() => {
+                        alert('📱 Sur iPad/iPhone :
+
+1. Le diagnostic s\'est ouvert dans un nouvel onglet
+2. Appuyez longuement sur le texte
+3. Sélectionnez "Tout sélectionner"
+4. Copiez et collez dans Notes ou Mail
+
+Ou appuyez sur le bouton Partager pour l\'envoyer par email.');
+                        URL.revokeObjectURL(url);
+                    }, 500);
+                } else {
+                    // Fallback : copier dans le presse-papier
+                    copyToClipboard(text);
+                }
+            } else {
+                // Méthode standard pour les autres navigateurs
+                const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'diagnostic_managerial_meilleurmanager.txt';
+                document.body.appendChild(a);
+                a.click();
+                
+                setTimeout(() => {
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                }, 100);
+            }
         }
 
+        // Fonction pour copier dans le presse-papier (fallback)
+        function copyToClipboard(text) {
+            const textArea = document.createElement('textarea');
+            textArea.value = text;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                document.execCommand('copy');
+                alert('✅ Diagnostic copié dans le presse-papier !
+
+Vous pouvez le coller dans Notes, Mail ou tout autre application.');
+            } catch (err) {
+                alert('❌ Impossible de sauvegarder automatiquement.
+
+Veuillez faire une capture d\'écran de vos résultats.');
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        
         // Initialiser au chargement
         window.onload = init;
     </script>
